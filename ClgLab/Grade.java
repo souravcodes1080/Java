@@ -1,9 +1,10 @@
-import java.util.Scanner;
+import java.io.*;
 class Grade{
-	public static void main(String args[]){
-		Scanner sc = new Scanner(System.in);
+	public static void main(String args[]) throws IOException{
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
 		System.out.println("Enter your marks: ");
-		int marks = sc.nextInt();
+		int marks = Integer.parseInt(br.readLine());
 		if( marks > 100 || marks < 0 )
 			System.out.println("Invalid marks");
 		else if( marks >= 90 )
